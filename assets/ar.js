@@ -82,7 +82,7 @@ var PH=[
 ];
 function phr(t){var o=t,x=num(t);PH.forEach(function(p){x=x.replace(p[0],p[1])});return x===num(o)?null:x}
 function rng(s){return s.replace(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g,function(x){return MON[x]})}
-function lrm(x){return x.replace(/(^|[\s(،])([+\u2212-])(\d)/g,'$1\u200E$2$3')}
+function lrm(x){return x.replace(/(^|[\s(،])([+\u2212-])(\d)/g,'$1\u200E$2$3').replace(/«([^«»\u2066\u2069]*[A-Za-z][^«»\u2066\u2069]*)»/g,function(m,a){return /[\u0600-\u06FF]/.test(a)?m:'«\u2066'+a+'\u2069»'})}
 function tr(s){
   var t=s.trim();if(!t)return s;
   var r=seg(t);
