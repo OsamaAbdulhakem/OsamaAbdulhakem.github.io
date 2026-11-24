@@ -1,0 +1,65 @@
+/* Arabic layer: Thmanyah Sans, RTL mirroring. Applies only when <html class="ar"> */
+@font-face{font-family:"Thmanyah Sans";src:url(fonts-ar/thmanyah-sans-Light.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url(fonts-ar/thmanyah-sans-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url(fonts-ar/thmanyah-sans-Medium.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url(fonts-ar/thmanyah-sans-Bold.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url(fonts-ar/thmanyah-sans-Black.woff2) format("woff2");font-weight:900;font-style:normal;font-display:swap}
+.lgsw{font-family:"Thmanyah Sans","Manrope",system-ui,sans-serif;margin-inline-end:8px;white-space:nowrap}
+.lgsw[lang=en]{font-family:"Manrope","Helvetica Neue",Arial,sans-serif}
+html.ar{--f:"Thmanyah Sans",system-ui,sans-serif;--fb:"Thmanyah Sans",system-ui,sans-serif;--fh:"Thmanyah Sans",system-ui,sans-serif}
+html.ar body,html.ar button,html.ar input,html.ar select,html.ar textarea,html.ar h1,html.ar h2,html.ar h3,html.ar h4,html.ar p,html.ar a,html.ar span,html.ar b,html.ar strong,html.ar em,html.ar small,html.ar li,html.ar div,html.ar time,html.ar header,html.ar nav,html.ar footer,html.ar i,html.ar label,html.ar dialog,html.ar article{font-family:"Thmanyah Sans",system-ui,sans-serif!important}
+html.ar .lgsw[lang=en]{font-family:"Manrope","Helvetica Neue",Arial,sans-serif!important}
+html.ar *,html.ar *::before,html.ar *::after{letter-spacing:0!important;text-transform:none!important}
+html.ar body{line-height:1.75}
+html.ar h1,html.ar h2,html.ar h3{line-height:1.25}
+html.ar .hero h1{line-height:1.2}
+html.ar .hero h1 span{padding-bottom:.08em}
+/* mirrored physical properties */
+html.ar .skip{left:auto;right:-999px}html.ar .skip:focus{right:8px;left:auto}
+html.ar .cta.ghost{margin-left:0;margin-right:10px}
+@media(max-width:700px){html.ar .cta.ghost{margin-right:0}}
+html.ar .name{right:auto;left:0}
+html.ar .pill{border-left:0;border-right:3px solid var(--vi)}
+html.ar .pill:hover{padding-left:24px;padding-right:34px}
+html.ar .tl{border-left:0;border-right:1px solid var(--ln);padding-left:0;padding-right:clamp(20px,4vw,48px)}
+html.ar .job::before{left:auto;right:calc(-1 * clamp(20px,4vw,48px) - 5px)}
+html.ar .job:hover{transform:translateX(-6px)}
+html.ar .job ul,html.ar .xb ul,html.ar .cr ul,html.ar .wh ul{padding-left:0;padding-right:18px}
+html.ar .card,html.ar .pcard,html.ar .bt2,html.ar .cat,html.ar .kc,html.ar .pn button,html.ar .phk{text-align:right}
+html.ar .pn button:last-child{text-align:left}
+html.ar .ex div:hover{padding-left:0;padding-right:18px}
+html.ar .chip.a{left:auto;right:0}html.ar .chip.b{right:auto;left:0}
+html.ar .mt::before,html.ar .mc::before,html.ar .cat::before{right:auto;left:-60px}
+html.ar .mt strong small{margin-right:0;margin-left:8px}
+html.ar .bar>em{text-align:left}
+html.ar .tg2{left:auto;right:14px}
+html.ar .pc:hover .cl span,html.ar .pcard:hover .go i,html.ar .kc:hover .kd i{transform:translateX(-6px)}
+html.ar .cg{text-align:right}
+html.ar .dn .ar{margin-left:0;margin-right:auto}
+html.ar .dt .nt{border-left:0;border-right:3px solid var(--am);padding-left:0;padding-right:12px}
+html.ar .cx{right:auto;left:14px}
+html.ar .xe::before{right:auto;left:18px}
+html.ar .pcard .hd span{margin-left:0;margin-right:auto}
+html.ar .dnw li b{margin-left:0;margin-right:auto}
+html.ar .gm .fs,html.ar .tmx .fs{right:auto;left:14px}
+html.ar .bt2 .vw{right:auto;left:8px}
+html.ar .cc::before{content:"↖";right:auto;left:20px}
+html.ar .pgx .nm{right:auto;left:10px}
+html.ar .kl{left:auto;right:16px}
+html.ar .mb{margin-left:0;margin-right:auto}
+html.ar .btt{right:auto;left:max(20px,env(safe-area-inset-left,0px))}
+html.ar nav{padding:8px 20px 8px 10px}
+html.ar .sp{left:auto;right:0;transform-origin:100% 50%}
+html.ar .alert{border-left-width:1px;border-right-width:4px}
+html.ar .stack img:nth-child(1){left:auto;right:0}
+html.ar .stack img:nth-child(2){left:auto;right:26px}
+html.ar .stack img:nth-child(3){left:auto;right:52px}
+html.ar .hero .glow{right:auto;left:-12vw}
+/* keep scrolling logo rails, charts and the PDF canvas left-to-right internally */
+html.ar .mq,html.ar .mr,html.ar .dvp,html.ar .stack,html.ar #pts,html.ar .bg{direction:ltr}
+html.ar .stats,html.ar .bento{direction:rtl}
+html.ar .dev,html.ar .pcard .th{direction:ltr}
+/* numbers and signs stay readable inside RTL runs */
+
+html.ar .mail,html.ar .cc b,html.ar a[href^="mailto"] b{direction:ltr;unicode-bidi:embed}
+html.ar .tools span,html.ar .chips span{direction:rtl}
